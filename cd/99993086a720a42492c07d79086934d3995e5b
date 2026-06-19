@@ -1,0 +1,62 @@
+Dockerfile
+  s_41224cf7add8c6::t_51f5195b8bcb6f 1-28
+src/db/client.ts
+  s_41224cf7add8c6::t_b12a6e15285d8b 1-18
+docker-compose.yml
+  s_41224cf7add8c6::t_fab1660c09df2f 1-53
+drizzle/0000_fine_shriek.sql
+  s_41224cf7add8c6::t_195f557bea7e26 1-9
+src/app/app.spec.ts
+  s_41224cf7add8c6::t_bc1fd0c0a7a4e6 1,3-56
+.dockerignore
+  s_41224cf7add8c6::t_1b14ad659ef0a0 1-13
+drizzle/meta/0000_snapshot.json
+  s_41224cf7add8c6::t_fd850dc4c599ce 1-74
+src/db/schema.ts
+  s_41224cf7add8c6::t_701d9879031600 1-22
+docker-entrypoint.sh
+  s_41224cf7add8c6::t_e7ebf235515ed6 1-14
+package.json
+  s_41224cf7add8c6::t_5597cde85cbb17 19-21,26,28
+  s_41224cf7add8c6::t_c5e631c84b052b 12-15
+src/products/repository.ts
+  s_41224cf7add8c6::t_0e743156a263f8 1-3,6-24,27-29,32-38
+drizzle/meta/_journal.json
+  s_41224cf7add8c6::t_fd850dc4c599ce 1-13
+drizzle.config.ts
+  s_41224cf7add8c6::t_6646b7e96c386d 1-12
+src/products/service.ts
+  s_41224cf7add8c6::t_eadea05b220ac3 7,11
+src/products/service.spec.ts
+  s_41224cf7add8c6::t_14c37d3a660372 43-44,51-52,57-58
+package-lock.json
+  s_41224cf7add8c6::t_fd850dc4c599ce 13-15,20,22,107-205,1151-2123,2126-2132,2134-2138,2140,2143-2149,2151-2158,2160-2166,2168-2172,2174,2177-2183,2186-2189,2191,2194-2200,2203-2206,2208,2211-2217,2220-2223,2225-2350,4177-4320
+src/db/seed.ts
+  s_41224cf7add8c6::t_ed0522d59ae164 1-109
+src/db/migrate.ts
+  s_41224cf7add8c6::t_feb4a196402ef6 1-19
+src/products/repository.spec.ts
+  s_41224cf7add8c6::t_7fda8aa961ca19 1-59,64-65,67,70-71,81-88,92-93,99-100,106,108
+src/products/routes.ts
+  s_41224cf7add8c6::t_096673a3befbb4 28
+  s_41224cf7add8c6::t_d1013c867670d3 68
+README.md
+  s_41224cf7add8c6::t_b008d5350cca7c 10,19,21-24,28-38,44-50,56-74,77-86
+  s_41224cf7add8c6::t_ab5a7043a8be1b 100-104,107-108,111-115
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.8",
+  "base_commit_sha": "cd99993086a720a42492c07d79086934d3995e5b",
+  "prompts": {},
+  "sessions": {
+    "s_41224cf7add8c6": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "ca0ed114-88ff-4642-8f34-428d05af0248",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "Justin McLellan <jmclellan@beast.>"
+    }
+  }
+}
