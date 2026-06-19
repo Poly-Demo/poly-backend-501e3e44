@@ -25,7 +25,7 @@ export async function productsRoutes(fastify: FastifyInstance) {
   };
 
   fastify.get('/api/products', getAllProductsOpts, async () => {
-    return productsService.getAll();
+    return await productsService.getAll();
   });
 
   const getProductByIdOpts: RouteShorthandOptions = {
@@ -65,7 +65,7 @@ export async function productsRoutes(fastify: FastifyInstance) {
     getProductByIdOpts,
     async (request, reply) => {
       const id = parseInt(request.params.id, 10);
-      const product = productsService.getById(id);
+      const product = await productsService.getById(id);
       if (!product) {
         reply.code(404);
         return { message: 'Product not found' };
