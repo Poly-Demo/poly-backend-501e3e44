@@ -43,11 +43,11 @@ The API listens on `http://localhost:3000` by default.
 
 ### Environment
 
-| Var            | Default                                            | Notes                          |
-| -------------- | -------------------------------------------------- | ------------------------------ |
-| `DATABASE_URL` | `postgres://polyshop:polyshop@localhost:5432/polyshop` | Postgres connection string |
-| `HOST`         | `localhost`                                        | Set to `0.0.0.0` in containers |
-| `PORT`         | `3000`                                             | Listen port                    |
+| Var            | Default                                                | Notes                          |
+| -------------- | ------------------------------------------------------ | ------------------------------ |
+| `DATABASE_URL` | `postgres://polyshop:polyshop@localhost:5432/polyshop` | Postgres connection string     |
+| `HOST`         | `localhost`                                            | Set to `0.0.0.0` in containers |
+| `PORT`         | `3000`                                                 | Listen port                    |
 
 ```sh
 HOST=0.0.0.0 PORT=3001 npm run dev
@@ -64,7 +64,7 @@ docker compose up --build
 ```
 
 - Postgres → `localhost:5432`
-- Backend  → `http://localhost:3000`
+- Backend → `http://localhost:3000`
 - Frontend → `http://localhost:5173`
 
 > The `frontend` service builds from the sibling directory
@@ -74,16 +74,16 @@ docker compose up --build
 
 ## Scripts
 
-| Script             | What it does                          |
-| ------------------ | ------------------------------------- |
-| `npm run dev`      | `tsx src/main.ts`                     |
-| `npm run build`    | `tsc -b` → `dist/`                    |
-| `npm start`        | `node dist/main.js`                   |
-| `npm test`         | `vitest run` (16 tests)               |
-| `npm run lint`     | `eslint .`                            |
+| Script                | What it does                                       |
+| --------------------- | -------------------------------------------------- |
+| `npm run dev`         | `tsx src/main.ts`                                  |
+| `npm run build`       | `tsc -b` → `dist/`                                 |
+| `npm start`           | `node dist/main.js`                                |
+| `npm test`            | `vitest run` (16 tests)                            |
+| `npm run lint`        | `eslint .`                                         |
 | `npm run db:generate` | `drizzle-kit generate` (new migration from schema) |
-| `npm run db:migrate`  | apply pending migrations           |
-| `npm run db:seed`     | seed the 8-product catalog (idempotent) |
+| `npm run db:migrate`  | apply pending migrations                           |
+| `npm run db:seed`     | seed the 8-product catalog (idempotent)            |
 
 ## Endpoints
 

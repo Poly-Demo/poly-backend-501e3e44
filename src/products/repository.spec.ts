@@ -44,8 +44,7 @@ vi.mock('../db/client.js', () => {
         whereId = cond.__eqId;
         return builder;
       },
-      limit: () =>
-        Promise.resolve(mockRows.filter((r) => r.id === whereId)),
+      limit: () => Promise.resolve(mockRows.filter((r) => r.id === whereId)),
       orderBy: () => Promise.resolve(mockRows),
     };
     return builder;
