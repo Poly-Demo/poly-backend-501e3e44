@@ -40,22 +40,22 @@ describe('ProductsService', () => {
   });
 
   describe('getAll', () => {
-    it('should return all products from repository', () => {
-      const result = service.getAll();
+    it('should return all products from repository', async () => {
+      const result = await service.getAll();
       expect(result).toEqual(mockProducts);
       expect(mockRepo.findAll).toHaveBeenCalledOnce();
     });
   });
 
   describe('getById', () => {
-    it('should return product by id', () => {
-      const result = service.getById(1);
+    it('should return product by id', async () => {
+      const result = await service.getById(1);
       expect(result).toEqual(mockProducts[0]);
       expect(mockRepo.findById).toHaveBeenCalledWith(1);
     });
 
-    it('should return undefined for non-existent id', () => {
-      const result = service.getById(999);
+    it('should return undefined for non-existent id', async () => {
+      const result = await service.getById(999);
       expect(result).toBeUndefined();
     });
   });

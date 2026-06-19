@@ -4,11 +4,11 @@ import { ProductsRepository, productsRepository } from './repository.js';
 export class ProductsService {
   constructor(private repo: ProductsRepository = productsRepository) {}
 
-  getAll(): Product[] {
+  getAll(): Promise<Product[]> {
     return this.repo.findAll();
   }
 
-  getById(id: number): Product | undefined {
+  getById(id: number): Promise<Product | undefined> {
     return this.repo.findById(id);
   }
 }

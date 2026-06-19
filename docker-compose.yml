@@ -1,0 +1,53 @@
+# Full PolyShopping stack: Postgres + Fastify backend + nginx-served frontend.
+#
+# NOTE: the `frontend` service builds from a SIBLING directory
+# (../poly-frontend-501e3e44). That repo must be checked out next to this one
+# and provide its own multi-stage Dockerfile that serves the built SPA via
+# nginx on container port 80.
+#
+# Bring the whole stack up with:  docker compose up --build
+
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: polyshop
+      POSTGRES_PASSWORD: polyshop
+      POSTGRES_DB: polyshop
+    ports:
+      - '5432:5432'
+    volumes:
+      - polyshop-db-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U polyshop -d polyshop']
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  backend:
+    build:
+      context: .
+    environment:
+      DATABASE_URL: postgres://polyshop:polyshop@db:5432/polyshop
+      HOST: 0.0.0.0
+      PORT: '3000'
+    ports:
+      - '3000:3000'
+    depends_on:
+      db:
+        condition: service_healthy
+
+  frontend:
+    # Assumes the poly-frontend repo is checked out as a sibling directory.
+    build:
+      context: ../poly-frontend-501e3e44
+      args:
+        # Browser-facing URL of the backend (requests originate from the host).
+        VITE_API_URL: http://localhost:3000
+    ports:
+      - '5173:80'
+    depends_on:
+      - backend
+
+volumes:
+  polyshop-db-data:

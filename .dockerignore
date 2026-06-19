@@ -1,0 +1,13 @@
+node_modules
+dist
+.git
+.github
+.vscode
+.idea
+coverage
+tmp
+out-tsc
+*.log
+npm-debug.log
+*.tsbuildinfo
+.DS_Store
