@@ -1,0 +1,25 @@
+README.md
+  s_41224cf7add8c6::t_8afdc109ce4cf7 46-50,67,77-83,85-86
+drizzle/meta/_journal.json
+  s_41224cf7add8c6::t_0b236463ea8b47 13
+src/products/repository.spec.ts
+  s_41224cf7add8c6::t_8afdc109ce4cf7 47
+drizzle/meta/0000_snapshot.json
+  s_41224cf7add8c6::t_0b236463ea8b47 74
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.8",
+  "base_commit_sha": "8df02fd3262bfe4158d8c0e761d5d83877ed3da8",
+  "prompts": {},
+  "sessions": {
+    "s_41224cf7add8c6": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "ca0ed114-88ff-4642-8f34-428d05af0248",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "Justin McLellan <jmclellan@beast.>"
+    }
+  }
+}
